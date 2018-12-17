@@ -1,0 +1,41 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 0E94 0000 		call WAVE_Init
+  25               	.LM3:
+  26               	/* #APP */
+  27               	 ;  14 "main.c" 1
+  28 0004 7894      		sei
+  29               	 ;  0 "" 2
+  30               	/* #NOAPP */
+  31               	.L2:
+  32               	.LM4:
+  33 0006 0E94 0000 		call WAVE_MainFunction
+  34 000a 00C0      		rjmp .L2
+  35               	.LFE6:
+  61               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc2QDf09.s:2      *ABS*:0000003f __SREG__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc2QDf09.s:3      *ABS*:0000003e __SP_H__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc2QDf09.s:4      *ABS*:0000003d __SP_L__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc2QDf09.s:5      *ABS*:00000034 __CCP__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc2QDf09.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc2QDf09.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc2QDf09.s:18     .text:00000000 main
+
+UNDEFINED SYMBOLS
+WAVE_Init
+WAVE_MainFunction

@@ -1,0 +1,301 @@
+   1               		.file	"uart_atmega16.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	__vector_11
+  18               	__vector_11:
+  19               	.LFB2:
+  20               	.LM1:
+  21 0000 1F92      		push __zero_reg__
+  22 0002 0F92      		push r0
+  23 0004 0FB6      		in r0,__SREG__
+  24 0006 0F92      		push r0
+  25 0008 1124      		clr __zero_reg__
+  26 000a 2F93      		push r18
+  27 000c 3F93      		push r19
+  28 000e 4F93      		push r20
+  29 0010 8F93      		push r24
+  30 0012 9F93      		push r25
+  31 0014 EF93      		push r30
+  32 0016 FF93      		push r31
+  33               	/* prologue: Signal */
+  34               	/* frame size = 0 */
+  35               	.LM2:
+  36               	/* #APP */
+  37               	 ;  20 "uart_atmega16.c" 1
+  38 0018 F894      		cli
+  39               	 ;  0 "" 2
+  40               	.LM3:
+  41               	/* #NOAPP */
+  42 001a 4CB1      		in r20,44-32
+  43               	.LVL0:
+  44               	.LM4:
+  45 001c 2091 0000 		lds r18,rx_cnt
+  46 0020 3091 0000 		lds r19,(rx_cnt)+1
+  47 0024 8091 0000 		lds r24,rx_len
+  48 0028 9091 0000 		lds r25,(rx_len)+1
+  49 002c 2817      		cp r18,r24
+  50 002e 3907      		cpc r19,r25
+  51 0030 00F4      		brsh .L2
+  52 0032 4032      		cpi r20,lo8(32)
+  53 0034 01F0      		breq .L2
+  54               	.LM5:
+  55 0036 8091 0000 		lds r24,rx_cnt
+  56 003a 9091 0000 		lds r25,(rx_cnt)+1
+  57 003e E091 0000 		lds r30,rx_buffer
+  58 0042 F091 0000 		lds r31,(rx_buffer)+1
+  59 0046 E80F      		add r30,r24
+  60 0048 F91F      		adc r31,r25
+  61 004a 4083      		st Z,r20
+  62               	.LM6:
+  63 004c 8091 0000 		lds r24,rx_cnt
+  64 0050 9091 0000 		lds r25,(rx_cnt)+1
+  65 0054 0196      		adiw r24,1
+  66 0056 9093 0000 		sts (rx_cnt)+1,r25
+  67 005a 8093 0000 		sts rx_cnt,r24
+  68               	.L2:
+  69               	.LM7:
+  70               	/* #APP */
+  71               	 ;  36 "uart_atmega16.c" 1
+  72 005e 7894      		sei
+  73               	 ;  0 "" 2
+  74               	/* epilogue start */
+  75               	.LM8:
+  76               	/* #NOAPP */
+  77 0060 FF91      		pop r31
+  78 0062 EF91      		pop r30
+  79 0064 9F91      		pop r25
+  80 0066 8F91      		pop r24
+  81 0068 4F91      		pop r20
+  82               	.LVL1:
+  83 006a 3F91      		pop r19
+  84 006c 2F91      		pop r18
+  85 006e 0F90      		pop r0
+  86 0070 0FBE      		out __SREG__,r0
+  87 0072 0F90      		pop r0
+  88 0074 1F90      		pop __zero_reg__
+  89 0076 1895      		reti
+  90               	.LFE2:
+  92               	.global	__vector_13
+  94               	__vector_13:
+  95               	.LFB3:
+  96               	.LM9:
+  97 0078 1F92      		push __zero_reg__
+  98 007a 0F92      		push r0
+  99 007c 0FB6      		in r0,__SREG__
+ 100 007e 0F92      		push r0
+ 101 0080 1124      		clr __zero_reg__
+ 102 0082 2F93      		push r18
+ 103 0084 3F93      		push r19
+ 104 0086 8F93      		push r24
+ 105 0088 9F93      		push r25
+ 106 008a EF93      		push r30
+ 107 008c FF93      		push r31
+ 108               	/* prologue: Signal */
+ 109               	/* frame size = 0 */
+ 110               	.LM10:
+ 111               	/* #APP */
+ 112               	 ;  41 "uart_atmega16.c" 1
+ 113 008e F894      		cli
+ 114               	 ;  0 "" 2
+ 115               	.LM11:
+ 116               	/* #NOAPP */
+ 117 0090 8091 0000 		lds r24,tx_cnt
+ 118 0094 9091 0000 		lds r25,(tx_cnt)+1
+ 119 0098 0196      		adiw r24,1
+ 120 009a 9093 0000 		sts (tx_cnt)+1,r25
+ 121 009e 8093 0000 		sts tx_cnt,r24
+ 122               	.LM12:
+ 123 00a2 2091 0000 		lds r18,tx_cnt
+ 124 00a6 3091 0000 		lds r19,(tx_cnt)+1
+ 125 00aa 8091 0000 		lds r24,tx_len
+ 126 00ae 9091 0000 		lds r25,(tx_len)+1
+ 127 00b2 2817      		cp r18,r24
+ 128 00b4 3907      		cpc r19,r25
+ 129 00b6 00F4      		brsh .L5
+ 130               	.LM13:
+ 131 00b8 8091 0000 		lds r24,tx_cnt
+ 132 00bc 9091 0000 		lds r25,(tx_cnt)+1
+ 133 00c0 E091 0000 		lds r30,tx_buffer
+ 134 00c4 F091 0000 		lds r31,(tx_buffer)+1
+ 135 00c8 E80F      		add r30,r24
+ 136 00ca F91F      		adc r31,r25
+ 137 00cc 8081      		ld r24,Z
+ 138 00ce 8CB9      		out 44-32,r24
+ 139               	.L5:
+ 140               	.LM14:
+ 141               	/* #APP */
+ 142               	 ;  50 "uart_atmega16.c" 1
+ 143 00d0 7894      		sei
+ 144               	 ;  0 "" 2
+ 145               	/* epilogue start */
+ 146               	.LM15:
+ 147               	/* #NOAPP */
+ 148 00d2 FF91      		pop r31
+ 149 00d4 EF91      		pop r30
+ 150 00d6 9F91      		pop r25
+ 151 00d8 8F91      		pop r24
+ 152 00da 3F91      		pop r19
+ 153 00dc 2F91      		pop r18
+ 154 00de 0F90      		pop r0
+ 155 00e0 0FBE      		out __SREG__,r0
+ 156 00e2 0F90      		pop r0
+ 157 00e4 1F90      		pop __zero_reg__
+ 158 00e6 1895      		reti
+ 159               	.LFE3:
+ 161               	.global	UART_Init
+ 163               	UART_Init:
+ 164               	.LFB4:
+ 165               	.LM16:
+ 166               	.LVL2:
+ 167               	/* prologue: function */
+ 168               	/* frame size = 0 */
+ 169 00e8 FC01      		movw r30,r24
+ 170               	.LM17:
+ 171 00ea 8081      		ld r24,Z
+ 172               	.LVL3:
+ 173 00ec 80BD      		out 64-32,r24
+ 174               	.LM18:
+ 175 00ee 8181      		ldd r24,Z+1
+ 176 00f0 89B9      		out 41-32,r24
+ 177               	.LM19:
+ 178 00f2 8281      		ldd r24,Z+2
+ 179 00f4 8BB9      		out 43-32,r24
+ 180               	.LM20:
+ 181 00f6 8381      		ldd r24,Z+3
+ 182 00f8 8AB9      		out 42-32,r24
+ 183               	.LM21:
+ 184 00fa 8481      		ldd r24,Z+4
+ 185 00fc 80BD      		out 64-32,r24
+ 186               	/* epilogue start */
+ 187               	.LM22:
+ 188 00fe 0895      		ret
+ 189               	.LFE4:
+ 191               	.global	UART_SendPayload
+ 193               	UART_SendPayload:
+ 194               	.LFB5:
+ 195               	.LM23:
+ 196               	.LVL4:
+ 197               	/* prologue: function */
+ 198               	/* frame size = 0 */
+ 199               	.LM24:
+ 200 0100 FC01      		movw r30,r24
+ 201               	.LVL5:
+ 202 0102 9093 0000 		sts (tx_buffer)+1,r25
+ 203 0106 8093 0000 		sts tx_buffer,r24
+ 204               	.LM25:
+ 205 010a 7093 0000 		sts (tx_len)+1,r23
+ 206 010e 6093 0000 		sts tx_len,r22
+ 207               	.LM26:
+ 208 0112 1092 0000 		sts (tx_cnt)+1,__zero_reg__
+ 209 0116 1092 0000 		sts tx_cnt,__zero_reg__
+ 210               	.L10:
+ 211               	.LM27:
+ 212 011a 5D9B      		sbis 43-32,5
+ 213 011c 00C0      		rjmp .L10
+ 214               	.LM28:
+ 215 011e 8081      		ld r24,Z
+ 216 0120 8CB9      		out 44-32,r24
+ 217               	/* epilogue start */
+ 218               	.LM29:
+ 219 0122 0895      		ret
+ 220               	.LFE5:
+ 222               	.global	UART_ReceivePayload
+ 224               	UART_ReceivePayload:
+ 225               	.LFB6:
+ 226               	.LM30:
+ 227               	.LVL6:
+ 228               	/* prologue: function */
+ 229               	/* frame size = 0 */
+ 230               	.LM31:
+ 231 0124 9093 0000 		sts (rx_buffer)+1,r25
+ 232 0128 8093 0000 		sts rx_buffer,r24
+ 233               	.LM32:
+ 234 012c 7093 0000 		sts (rx_len)+1,r23
+ 235 0130 6093 0000 		sts rx_len,r22
+ 236               	.LM33:
+ 237 0134 1092 0000 		sts (rx_cnt)+1,__zero_reg__
+ 238 0138 1092 0000 		sts rx_cnt,__zero_reg__
+ 239               	/* epilogue start */
+ 240               	.LM34:
+ 241 013c 0895      		ret
+ 242               	.LFE6:
+ 244               	.global	UART_IsTxComplete
+ 246               	UART_IsTxComplete:
+ 247               	.LFB7:
+ 248               	.LM35:
+ 249               	/* prologue: function */
+ 250               	/* frame size = 0 */
+ 251               	.LM36:
+ 252 013e 2091 0000 		lds r18,tx_cnt
+ 253 0142 3091 0000 		lds r19,(tx_cnt)+1
+ 254 0146 8091 0000 		lds r24,tx_len
+ 255 014a 9091 0000 		lds r25,(tx_len)+1
+ 256 014e 40E0      		ldi r20,lo8(0)
+ 257 0150 2817      		cp r18,r24
+ 258 0152 3907      		cpc r19,r25
+ 259 0154 00F0      		brlo .L16
+ 260 0156 41E0      		ldi r20,lo8(1)
+ 261               	.L16:
+ 262               	.LM37:
+ 263 0158 842F      		mov r24,r20
+ 264               	/* epilogue start */
+ 265 015a 0895      		ret
+ 266               	.LFE7:
+ 268               	.global	UART_IsRxComplete
+ 270               	UART_IsRxComplete:
+ 271               	.LFB8:
+ 272               	.LM38:
+ 273               	/* prologue: function */
+ 274               	/* frame size = 0 */
+ 275               	.LM39:
+ 276 015c 2091 0000 		lds r18,rx_cnt
+ 277 0160 3091 0000 		lds r19,(rx_cnt)+1
+ 278 0164 8091 0000 		lds r24,rx_len
+ 279 0168 9091 0000 		lds r25,(rx_len)+1
+ 280 016c 40E0      		ldi r20,lo8(0)
+ 281 016e 2817      		cp r18,r24
+ 282 0170 3907      		cpc r19,r25
+ 283 0172 00F0      		brlo .L19
+ 284 0174 41E0      		ldi r20,lo8(1)
+ 285               	.L19:
+ 286               	.LM40:
+ 287 0176 842F      		mov r24,r20
+ 288               	/* epilogue start */
+ 289 0178 0895      		ret
+ 290               	.LFE8:
+ 292               		.lcomm tx_buffer,2
+ 293               		.lcomm tx_len,2
+ 294               		.lcomm tx_cnt,2
+ 295               		.lcomm rx_buffer,2
+ 296               		.lcomm rx_len,2
+ 297               		.lcomm rx_cnt,2
+ 370               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 uart_atmega16.c
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:2      *ABS*:0000003f __SREG__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:3      *ABS*:0000003e __SP_H__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:4      *ABS*:0000003d __SP_L__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:5      *ABS*:00000034 __CCP__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:18     .text:00000000 __vector_11
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:296    .bss:0000000a rx_cnt
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:295    .bss:00000008 rx_len
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:294    .bss:00000006 rx_buffer
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:94     .text:00000078 __vector_13
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:293    .bss:00000004 tx_cnt
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:292    .bss:00000002 tx_len
+                             .bss:00000000 tx_buffer
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:163    .text:000000e8 UART_Init
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:193    .text:00000100 UART_SendPayload
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:224    .text:00000124 UART_ReceivePayload
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:246    .text:0000013e UART_IsTxComplete
+C:\Users\AHMEDN~1\AppData\Local\Temp/cc8JoSCB.s:270    .text:0000015c UART_IsRxComplete
+
+UNDEFINED SYMBOLS
+__do_clear_bss
