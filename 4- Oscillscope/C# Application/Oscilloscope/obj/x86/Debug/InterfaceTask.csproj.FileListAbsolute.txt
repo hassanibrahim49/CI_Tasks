@@ -1,0 +1,52 @@
+C:\Users\Ducki\Desktop\SerialPlotter-master\SerialPlotter\bin\Debug\SerialPlotter.exe
+C:\Users\Ducki\Desktop\SerialPlotter-master\SerialPlotter\bin\Debug\SerialPlotter.pdb
+C:\Users\Ducki\Desktop\SerialPlotter-master\SerialPlotter\obj\x86\Debug\InterfaceTask.csprojResolveAssemblyReference.cache
+C:\Users\Ducki\Desktop\SerialPlotter-master\SerialPlotter\obj\x86\Debug\SerialPlotter.Form1.resources
+C:\Users\Ducki\Desktop\SerialPlotter-master\SerialPlotter\obj\x86\Debug\SerialPlotter.Properties.Resources.resources
+C:\Users\Ducki\Desktop\SerialPlotter-master\SerialPlotter\obj\x86\Debug\InterfaceTask.csproj.GenerateResource.Cache
+C:\Users\Ducki\Desktop\SerialPlotter-master\SerialPlotter\obj\x86\Debug\SerialPlotter.exe
+C:\Users\Ducki\Desktop\SerialPlotter-master\SerialPlotter\obj\x86\Debug\SerialPlotter.pdb
+C:\Users\Ducki\Desktop\SerialPlotter\SerialPlotter\obj\x86\Debug\InterfaceTask.csprojResolveAssemblyReference.cache
+C:\Users\Ducki\Desktop\SerialPlotter\SerialPlotter\obj\x86\Debug\SerialPlotter.Form1.resources
+C:\Users\Ducki\Desktop\SerialPlotter\SerialPlotter\obj\x86\Debug\InterfaceTask.csproj.GenerateResource.Cache
+C:\Users\Ducki\Desktop\SerialPlotter\SerialPlotter\bin\Debug\Oscilloscope.exe
+C:\Users\Ducki\Desktop\SerialPlotter\SerialPlotter\bin\Debug\Oscilloscope.pdb
+C:\Users\Ducki\Desktop\SerialPlotter\SerialPlotter\obj\x86\Debug\Oscilloscope.Properties.Resources.resources
+C:\Users\Ducki\Desktop\SerialPlotter\SerialPlotter\obj\x86\Debug\Oscilloscope.exe
+C:\Users\Ducki\Desktop\SerialPlotter\SerialPlotter\obj\x86\Debug\Oscilloscope.pdb
+C:\Users\Ducki\Desktop\Oscilloscope\SerialPlotter\obj\x86\Debug\Oscilloscope.exe
+C:\Users\Ducki\Desktop\Oscilloscope\SerialPlotter\obj\x86\Debug\Oscilloscope.pdb
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\SerialPlotter\obj\x86\Debug\Oscilloscope.exe
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\SerialPlotter\obj\x86\Debug\Oscilloscope.pdb
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\SerialPlotter\bin\Debug\Oscilloscope.exe
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\SerialPlotter\bin\Debug\Oscilloscope.pdb
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\SerialPlotter\obj\x86\Debug\InterfaceTask.csprojResolveAssemblyReference.cache
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\SerialPlotter\obj\x86\Debug\Oscilloscope.Properties.Resources.resources
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\SerialPlotter\obj\x86\Debug\InterfaceTask.csproj.GenerateResource.Cache
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\SerialPlotter\obj\x86\Debug\Oscilloscope.Form1.resources
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\Oscilloscope.exe
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\Oscilloscope.pdb
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\Oscilloscope\bin\Debug\Oscilloscope.exe
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\Oscilloscope\bin\Debug\Oscilloscope.pdb
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\InterfaceTask.csprojResolveAssemblyReference.cache
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\Oscilloscope.Form1.resources
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\Oscilloscope.Properties.Resources.resources
+C:\Users\Ducki\Desktop\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\InterfaceTask.csproj.GenerateResource.Cache
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\Lab4 & Lab5\Oscilloscope - Copy\Oscilloscope\bin\Debug\Oscilloscope.exe
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\Lab4 & Lab5\Oscilloscope - Copy\Oscilloscope\bin\Debug\Oscilloscope.pdb
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\Lab4 & Lab5\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\InterfaceTask.csprojAssemblyReference.cache
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\Lab4 & Lab5\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\Oscilloscope.Form1.resources
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\Lab4 & Lab5\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\Oscilloscope.Properties.Resources.resources
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\Lab4 & Lab5\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\InterfaceTask.csproj.GenerateResource.cache
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\Lab4 & Lab5\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\InterfaceTask.csproj.CoreCompileInputs.cache
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\Lab4 & Lab5\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\Oscilloscope.exe
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\Lab4 & Lab5\Oscilloscope - Copy\Oscilloscope\obj\x86\Debug\Oscilloscope.pdb
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\4- Oscillscope\C# Application\Oscilloscope\bin\Debug\Oscilloscope.exe
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\4- Oscillscope\C# Application\Oscilloscope\bin\Debug\Oscilloscope.pdb
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\4- Oscillscope\C# Application\Oscilloscope\obj\x86\Debug\InterfaceTask.csprojAssemblyReference.cache
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\4- Oscillscope\C# Application\Oscilloscope\obj\x86\Debug\Oscilloscope.Form1.resources
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\4- Oscillscope\C# Application\Oscilloscope\obj\x86\Debug\Oscilloscope.Properties.Resources.resources
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\4- Oscillscope\C# Application\Oscilloscope\obj\x86\Debug\InterfaceTask.csproj.GenerateResource.cache
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\4- Oscillscope\C# Application\Oscilloscope\obj\x86\Debug\InterfaceTask.csproj.CoreCompileInputs.cache
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\4- Oscillscope\C# Application\Oscilloscope\obj\x86\Debug\Oscilloscope.exe
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\4- Oscillscope\C# Application\Oscilloscope\obj\x86\Debug\Oscilloscope.pdb
