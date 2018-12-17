@@ -1,0 +1,28 @@
+c:\users\ducki\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+c:\users\ducki\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+c:\users\ducki\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+c:\users\ducki\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+c:\users\ducki\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+c:\users\ducki\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+c:\users\ducki\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+c:\users\ducki\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+c:\users\ducki\documents\visual studio 2015\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Ducki\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\Ducki\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\Ducki\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Ducki\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\Ducki\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\Ducki\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\Ducki\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+C:\Users\Ducki\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\Ducki\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\3- Logic analyzer\C# Application\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\3- Logic analyzer\C# Application\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\3- Logic analyzer\C# Application\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\3- Logic analyzer\C# Application\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojAssemblyReference.cache
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\3- Logic analyzer\C# Application\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Form1.resources
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\3- Logic analyzer\C# Application\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\3- Logic analyzer\C# Application\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.cache
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\3- Logic analyzer\C# Application\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.CoreCompileInputs.cache
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\3- Logic analyzer\C# Application\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\ihass\Documents\##LECTURES\4th Computer\CI\Labs & assingments\CI_Tasks\3- Logic analyzer\C# Application\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
