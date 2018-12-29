@@ -1,0 +1,420 @@
+
+Bluetooth_Motor.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000190  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00800060  00000204  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000006  00800060  00800060  00000204  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000204  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000234  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000118  00000000  00000000  00000270  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00000cc1  00000000  00000000  00000388  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000883  00000000  00000000  00001049  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   0000085b  00000000  00000000  000018cc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000001c8  00000000  00000000  00002128  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000511  00000000  00000000  000022f0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000183  00000000  00000000  00002801  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000c8  00000000  00000000  00002984  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2a 00 	jmp	0x54	; 0x54 <__ctors_end>
+   4:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   8:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+   c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  10:	0c 94 60 00 	jmp	0xc0	; 0xc0 <__vector_4>
+  14:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  18:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  1c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  20:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  24:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  28:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  2c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__vector_11>
+  30:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  34:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  38:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  3c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  40:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  44:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  48:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  4c:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+  50:	0c 94 3c 00 	jmp	0x78	; 0x78 <__bad_interrupt>
+
+00000054 <__ctors_end>:
+  54:	11 24       	eor	r1, r1
+  56:	1f be       	out	0x3f, r1	; 63
+  58:	cf e5       	ldi	r28, 0x5F	; 95
+  5a:	d4 e0       	ldi	r29, 0x04	; 4
+  5c:	de bf       	out	0x3e, r29	; 62
+  5e:	cd bf       	out	0x3d, r28	; 61
+
+00000060 <__do_clear_bss>:
+  60:	20 e0       	ldi	r18, 0x00	; 0
+  62:	a0 e6       	ldi	r26, 0x60	; 96
+  64:	b0 e0       	ldi	r27, 0x00	; 0
+  66:	01 c0       	rjmp	.+2      	; 0x6a <.do_clear_bss_start>
+
+00000068 <.do_clear_bss_loop>:
+  68:	1d 92       	st	X+, r1
+
+0000006a <.do_clear_bss_start>:
+  6a:	a6 36       	cpi	r26, 0x66	; 102
+  6c:	b2 07       	cpc	r27, r18
+  6e:	e1 f7       	brne	.-8      	; 0x68 <.do_clear_bss_loop>
+  70:	0e 94 96 00 	call	0x12c	; 0x12c <main>
+  74:	0c 94 c6 00 	jmp	0x18c	; 0x18c <_exit>
+
+00000078 <__bad_interrupt>:
+  78:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000007c <ADC_voidInitializeADC>:
+	 ADMUX = 0b01100001;
+	 */
+
+	// Bit 7:6 - REFS1:0: Reference Selection Bits
+	// REFS1:0    REFS0:1     : AVCC With external capacitor at AREF pin
+	Clr_Bit(ADMUX, 7);
+  7c:	3f 98       	cbi	0x07, 7	; 7
+	Set_Bit(ADMUX, 6);
+  7e:	3e 9a       	sbi	0x07, 6	; 7
+
+	// Bit 5 - ADLAR : ADC Left Adjust Result
+	// Making this bit 1 will make Left Adjust to the Register
+	Set_Bit(ADMUX, 5);
+  80:	3d 9a       	sbi	0x07, 5	; 7
+
+	// Bits 4:0 - Mux4:0 : Analog channel and gain selection Bits
+	// MUX4:0  : 00001 : ADC0
+	Clr_Bit(ADMUX, 4);
+  82:	3c 98       	cbi	0x07, 4	; 7
+	Clr_Bit(ADMUX, 3);
+  84:	3b 98       	cbi	0x07, 3	; 7
+	Clr_Bit(ADMUX, 2);
+  86:	3a 98       	cbi	0x07, 2	; 7
+	Clr_Bit(ADMUX, 1);
+  88:	39 98       	cbi	0x07, 1	; 7
+	Clr_Bit(ADMUX, 0);
+  8a:	38 98       	cbi	0x07, 0	; 7
+	 ADCSRA : ADC Control and Status Register
+	 ADCSRA = 0b10000011;
+	 */
+
+	// Bit 7 : ADEN : ADC Enable
+	Set_Bit(ADCSRA, 7);		// ADCSRA=0b10000000;
+  8c:	37 9a       	sbi	0x06, 7	; 6
+
+	// ADC Enable and Prescaler of 8
+	// 1000000 / 8 = 125000
+	Set_Bit(ADCSRA, 2);
+  8e:	32 9a       	sbi	0x06, 2	; 6
+	Set_Bit(ADCSRA, 1);
+  90:	31 9a       	sbi	0x06, 1	; 6
+	Set_Bit(ADCSRA, 0);
+  92:	30 9a       	sbi	0x06, 0	; 6
+  94:	08 95       	ret
+
+00000096 <ADC_u8ReadADC>:
+}
+
+extern unsigned char  ADC_u8ReadADC(void) {
+
+	// Bit 6 : ADSC : ADC Start conversion
+	Set_Bit(ADCSRA, 6);
+  96:	36 9a       	sbi	0x06, 6	; 6
+
+	// Bit 4 : ADIF : ADC Interrupt Flag ( Polling on the ADC Interrupt Flag )
+	while (Get_Bit(ADCSRA,4) == 0) {
+  98:	34 9b       	sbis	0x06, 4	; 6
+  9a:	fe cf       	rjmp	.-4      	; 0x98 <ADC_u8ReadADC+0x2>
+		// Do Nothing
+	};
+
+	// Bit 4 : This bit is set when an ADC conversion completes and the data registers are updated
+	// Clearing the ADC flag by writing logical one
+	Set_Bit(ADCSRA, 4);
+  9c:	34 9a       	sbi	0x06, 4	; 6
+
+	// Return ADCH value
+	return ADCH;
+  9e:	85 b1       	in	r24, 0x05	; 5
+}
+  a0:	08 95       	ret
+
+000000a2 <__vector_11>:
+
+#include "../all-includes.h"
+#include "avr/io.h"
+
+u8 UART;
+ISR( USART_RXC_vect) {
+  a2:	1f 92       	push	r1
+  a4:	0f 92       	push	r0
+  a6:	0f b6       	in	r0, 0x3f	; 63
+  a8:	0f 92       	push	r0
+  aa:	11 24       	eor	r1, r1
+  ac:	8f 93       	push	r24
+	UART = UDR;
+  ae:	8c b1       	in	r24, 0x0c	; 12
+  b0:	80 93 64 00 	sts	0x0064, r24	; 0x800064 <UART>
+}
+  b4:	8f 91       	pop	r24
+  b6:	0f 90       	pop	r0
+  b8:	0f be       	out	0x3f, r0	; 63
+  ba:	0f 90       	pop	r0
+  bc:	1f 90       	pop	r1
+  be:	18 95       	reti
+
+000000c0 <__vector_4>:
+}
+void turn_on_motor(unsigned char speed) {
+	OCR0 = speed;
+}
+
+ISR (TIMER2_OVF_vect) {
+  c0:	1f 92       	push	r1
+  c2:	0f 92       	push	r0
+  c4:	0f b6       	in	r0, 0x3f	; 63
+  c6:	0f 92       	push	r0
+  c8:	11 24       	eor	r1, r1
+  ca:	8f 93       	push	r24
+  cc:	9f 93       	push	r25
+	counter++;
+  ce:	80 91 60 00 	lds	r24, 0x0060	; 0x800060 <_edata>
+  d2:	8f 5f       	subi	r24, 0xFF	; 255
+  d4:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <_edata>
+	if (counter == max_number_of_overflows) {
+  d8:	90 91 65 00 	lds	r25, 0x0065	; 0x800065 <max_number_of_overflows>
+  dc:	89 13       	cpse	r24, r25
+  de:	03 c0       	rjmp	.+6      	; 0xe6 <__vector_4+0x26>
+extern unsigned char Mode;
+extern unsigned char Timer_interval;
+extern unsigned char Motor_speed;
+ 
+void turn_off_motor(void) {
+	OCR0 = 0;
+  e0:	1c be       	out	0x3c, r1	; 60
+
+ISR (TIMER2_OVF_vect) {
+	counter++;
+	if (counter == max_number_of_overflows) {
+		turn_off_motor() ;
+		counter = 0;
+  e2:	10 92 60 00 	sts	0x0060, r1	; 0x800060 <_edata>
+	}
+}
+  e6:	9f 91       	pop	r25
+  e8:	8f 91       	pop	r24
+  ea:	0f 90       	pop	r0
+  ec:	0f be       	out	0x3f, r0	; 63
+  ee:	0f 90       	pop	r0
+  f0:	1f 90       	pop	r1
+  f2:	18 95       	reti
+
+000000f4 <set_time>:
+	 * F_timer = 4000000/1024 = 3906 HZ
+	 *
+	 */
+	unsigned int number_of_counts;
+	number_of_counts = interval * 3906;
+	max_number_of_overflows = number_of_counts / 256;
+  f4:	22 e4       	ldi	r18, 0x42	; 66
+  f6:	3f e0       	ldi	r19, 0x0F	; 15
+  f8:	48 2f       	mov	r20, r24
+  fa:	42 9f       	mul	r20, r18
+  fc:	c0 01       	movw	r24, r0
+  fe:	43 9f       	mul	r20, r19
+ 100:	90 0d       	add	r25, r0
+ 102:	11 24       	eor	r1, r1
+ 104:	90 93 65 00 	sts	0x0065, r25	; 0x800065 <max_number_of_overflows>
+ 108:	08 95       	ret
+
+0000010a <motor_manual_mode>:
+void turn_off_motor(void) {
+	OCR0 = 0;
+
+}
+void turn_on_motor(unsigned char speed) {
+	OCR0 = speed;
+ 10a:	6c bf       	out	0x3c, r22	; 60
+}
+
+void motor_manual_mode(unsigned char interval, unsigned char speed) {
+	/* speed == duty_cycle */
+	turn_on_motor(speed);
+	set_time(interval);
+ 10c:	0e 94 7a 00 	call	0xf4	; 0xf4 <set_time>
+	timer2_normal_mode_init();
+ 110:	0e 94 b8 00 	call	0x170	; 0x170 <timer2_normal_mode_init>
+ 114:	08 95       	ret
+
+00000116 <motor_autmoatic_mode>:
+}
+void motor_autmoatic_mode(void) {
+	unsigned char speed = 	
+ 116:	0e 94 4b 00 	call	0x96	; 0x96 <ADC_u8ReadADC>
+void turn_off_motor(void) {
+	OCR0 = 0;
+
+}
+void turn_on_motor(unsigned char speed) {
+	OCR0 = speed;
+ 11a:	8c bf       	out	0x3c, r24	; 60
+ 11c:	08 95       	ret
+
+0000011e <Task_init>:
+	turn_on_motor(speed) ;
+}
+
+void Task_init(void) {
+	/* ADC0 : TEMP_sensor on PA0 pin  */
+	DDRA &= ~(1 << 0);
+ 11e:	d0 98       	cbi	0x1a, 0	; 26
+	/* OC0 : motor connected to PB3 pin */
+	DDRB |= (1 << 3);
+ 120:	bb 9a       	sbi	0x17, 3	; 23
+extern unsigned char Mode;
+extern unsigned char Timer_interval;
+extern unsigned char Motor_speed;
+ 
+void turn_off_motor(void) {
+	OCR0 = 0;
+ 122:	1c be       	out	0x3c, r1	; 60
+	DDRB |= (1 << 3);
+	/*initial value :TURn off motor */
+	turn_off_motor();
+
+	/* enable global interrupts */
+	SREG |= (1 << 7);
+ 124:	8f b7       	in	r24, 0x3f	; 63
+ 126:	80 68       	ori	r24, 0x80	; 128
+ 128:	8f bf       	out	0x3f, r24	; 63
+ 12a:	08 95       	ret
+
+0000012c <main>:
+
+}
+
+int main(void) {
+	/*...Initialization... */
+	USART_Init(BAUD_RATE);
+ 12c:	80 e8       	ldi	r24, 0x80	; 128
+ 12e:	95 e2       	ldi	r25, 0x25	; 37
+ 130:	0e 94 bf 00 	call	0x17e	; 0x17e <USART_Init>
+	Timer0_Void_Initialize_PWMmode();
+ 134:	0e 94 b2 00 	call	0x164	; 0x164 <Timer0_Void_Initialize_PWMmode>
+	ADC_voidInitializeADC();
+ 138:	0e 94 3e 00 	call	0x7c	; 0x7c <ADC_voidInitializeADC>
+	Task_init();
+ 13c:	0e 94 8f 00 	call	0x11e	; 0x11e <Task_init>
+
+	while (1) {
+		if (Mode == MANUAL_MODE) {
+ 140:	80 91 62 00 	lds	r24, 0x0062	; 0x800062 <Mode>
+ 144:	81 30       	cpi	r24, 0x01	; 1
+ 146:	39 f4       	brne	.+14     	; 0x156 <main+0x2a>
+			motor_manual_mode(Timer_interval, Motor_speed);
+ 148:	60 91 61 00 	lds	r22, 0x0061	; 0x800061 <Motor_speed>
+ 14c:	80 91 63 00 	lds	r24, 0x0063	; 0x800063 <Timer_interval>
+ 150:	0e 94 85 00 	call	0x10a	; 0x10a <motor_manual_mode>
+ 154:	f5 cf       	rjmp	.-22     	; 0x140 <main+0x14>
+		} else if (Mode == AUTOMATIC_MODE) {
+ 156:	81 11       	cpse	r24, r1
+ 158:	03 c0       	rjmp	.+6      	; 0x160 <main+0x34>
+			motor_autmoatic_mode();
+ 15a:	0e 94 8b 00 	call	0x116	; 0x116 <motor_autmoatic_mode>
+ 15e:	f0 cf       	rjmp	.-32     	; 0x140 <main+0x14>
+extern unsigned char Mode;
+extern unsigned char Timer_interval;
+extern unsigned char Motor_speed;
+ 
+void turn_off_motor(void) {
+	OCR0 = 0;
+ 160:	1c be       	out	0x3c, r1	; 60
+ 162:	ee cf       	rjmp	.-36     	; 0x140 <main+0x14>
+
+00000164 <Timer0_Void_Initialize_PWMmode>:
+	/*
+	 TCCR0 : Timer Counter Control Register
+	 TCCR0 = 0b01110101;
+	 */
+
+	TCCR0=0b01110101;
+ 164:	85 e7       	ldi	r24, 0x75	; 117
+ 166:	83 bf       	out	0x33, r24	; 51
+
+	// Clearing older timer modes
+	TIMSK=0b00000000;
+ 168:	19 be       	out	0x39, r1	; 57
+	/*
+		 OCR0 : Output Compare Register
+		 It counts from 0 to Number in Compare Match Mode
+	*/
+		// Initializing the counter with 255 to start from 0
+	OCR0=255;
+ 16a:	8f ef       	ldi	r24, 0xFF	; 255
+ 16c:	8c bf       	out	0x3c, r24	; 60
+ 16e:	08 95       	ret
+
+00000170 <timer2_normal_mode_init>:
+
+// timer 2 normal mode
+extern void timer2_normal_mode_init(void){
+
+		/* Timer initial value*/
+	TCNT2 = 0;
+ 170:	14 bc       	out	0x24, r1	; 36
+	/* enable overflow interrupt */
+	TIMSK |= (1<<TOIE2);
+ 172:	89 b7       	in	r24, 0x39	; 57
+ 174:	80 64       	ori	r24, 0x40	; 64
+ 176:	89 bf       	out	0x39, r24	; 57
+	 * 1. Non PWM mode FOC2=1
+	 * 2. Normal Mode WGM21=0 & WGM20=0
+	 * 3. Normal Mode COM20=0 & COM21=0
+	 * 4. clock = F_CPU/1024 CS20=1 CS21=1 CS22=1
+	 */
+	TCCR2 = (1<<FOC2) | (1<<CS22) |(1<<CS21) | (1<<CS20);
+ 178:	87 e8       	ldi	r24, 0x87	; 135
+ 17a:	85 bd       	out	0x25, r24	; 37
+ 17c:	08 95       	ret
+
+0000017e <USART_Init>:
+#include <avr/io.h>
+#include "USART_Master.h"
+void USART_Init( unsigned int ubrr)
+{
+	/*Set baud rate */
+	UBRRH = (unsigned char)(ubrr>>8);
+ 17e:	90 bd       	out	0x20, r25	; 32
+	UBRRL = (unsigned char)ubrr;
+ 180:	89 b9       	out	0x09, r24	; 9
+	//Enable receiver and transmitter 
+	UCSRB = (1<<RXEN)|(1<<TXEN);
+ 182:	88 e1       	ldi	r24, 0x18	; 24
+ 184:	8a b9       	out	0x0a, r24	; 10
+	/* Set frame format: 8data, 2stop bit */
+	UCSRC = (1<<URSEL)|(1<<USBS)|(3<<UCSZ0);
+ 186:	8e e8       	ldi	r24, 0x8E	; 142
+ 188:	80 bd       	out	0x20, r24	; 32
+ 18a:	08 95       	ret
+
+0000018c <_exit>:
+ 18c:	f8 94       	cli
+
+0000018e <__stop_program>:
+ 18e:	ff cf       	rjmp	.-2      	; 0x18e <__stop_program>
